@@ -39,6 +39,6 @@ suite('Extension Test Suite', () => {
     });
 
     test('Extension should be present', () => {
-        assert.ok(vscode.extensions.getExtension('your-publisher-name.copilot-prompt-library'));
+        assert.ok(vscode.extensions.getExtension('dilipseshadri.copilot-prompt-library'));
     });
 });

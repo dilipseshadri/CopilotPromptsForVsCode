@@ -3,19 +3,19 @@
   "displayName": "Copilot Prompt Library",
   "description": "A collection of predefined prompts for GitHub Copilot Chat",
   "version": "1.0.0",
-  "publisher": "your-publisher-name",
+  "publisher": "dilipseshadri",
   "author": {
-    "name": "Your Name"
+    "name": "Dilip Seshadri"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/copilot-prompt-library"
+    "url": "https://github.com/dilipseshadri/CopilotPromptsForVsCode"
   },
   "bugs": {
-    "url": "https://github.com/your-username/copilot-prompt-library/issues"
+    "url": "https://github.com/dilipseshadri/CopilotPromptsForVsCode/issues"
   },
-  "homepage": "https://github.com/your-username/copilot-prompt-library#readme",
+  "homepage": "https://github.com/dilipseshadri/CopilotPromptsForVsCode#readme",
   "keywords": [
     "copilot",
     "github",
