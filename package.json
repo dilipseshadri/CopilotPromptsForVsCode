@@ -1,0 +1,133 @@
+{
+  "name": "copilot-prompt-library",
+  "displayName": "Copilot Prompt Library",
+  "description": "A collection of predefined prompts for GitHub Copilot Chat",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "author": {
+    "name": "Your Name"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/copilot-prompt-library"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/copilot-prompt-library/issues"
+  },
+  "homepage": "https://github.com/your-username/copilot-prompt-library#readme",
+  "keywords": [
+    "copilot",
+    "github",
+    "ai",
+    "prompts",
+    "chat",
+    "assistant",
+    "code-review",
+    "refactoring",
+    "testing"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onCommand:copilot-prompt-library.showPrompts"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copilot-prompt-library.showPrompts",
+        "title": "Show Copilot Prompts",
+        "category": "Copilot Prompt Library"
+      },
+      {
+        "command": "copilot-prompt-library.insertPrompt",
+        "title": "Insert Prompt to Copilot Chat",
+        "category": "Copilot Prompt Library"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "copilot-prompt-library.showPrompts",
+        "key": "ctrl+shift+alt+p",
+        "mac": "cmd+shift+alt+p",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "copilot-prompt-library.showPrompts",
+          "when": "true"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "copilot-prompt-library.showPrompts",
+          "group": "copilot",
+          "when": "editorHasSelection"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Copilot Prompt Library",
+      "properties": {
+        "copilotPromptLibrary.customPrompts": {
+          "type": "array",
+          "default": [],
+          "description": "Custom prompts to add to the library",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title of the prompt"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of what the prompt does"
+              },
+              "prompt": {
+                "type": "string",
+                "description": "The actual prompt text"
+              },
+              "category": {
+                "type": "string",
+                "description": "Category for organizing prompts"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^8.57.1",
+    "glob": "^8.1.0",
+    "mocha": "^10.8.2",
+    "typescript": "^4.9.4",
+    "vsce": "^2.15.0"
+  }
+}
